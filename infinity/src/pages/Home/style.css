@@ -1,0 +1,113 @@
+
+.home__container{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.home__video{
+    position: absolute;
+    top:0;
+    z-index: -1;
+    width:100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.home__video video{
+    width:100%;
+}
+
+.home__text{
+    text-align: center;
+}
+
+.home__text h1{
+  
+  color:#ffffff;
+    padding: 180px 0px 50px 0px;
+    font-size: 50px;
+    font-family:'Bebas Neue', cursive;
+}
+
+.home__text h3{
+  
+  color:#ffffff;
+    width:700px;
+    font-size: 20px;
+    font-family: 'MuseoModerno', cursive;
+}
+
+#home__buttonContainer{
+    margin-top:80px;
+    display: flex;
+    gap: 50vh;
+}
+
+.home__button{
+    position:relative;
+    height:50px;
+    width:150px;
+    font-size:20px;
+    font-family: 'Bungee', cursive;
+    background:#101f36;
+    color:#fff;
+    border:none;
+    cursor:pointer;
+    outline:none;
+    transition:800ms ease all;
+  }
+  
+  .home__button:hover{
+    background:#fff;
+    color:#101f36;
+  }
+
+  .home__button:before,.home__button:after{
+    content:'';
+    position:absolute;
+    top:0;
+    right:0;
+    height:2px;
+    width:0;
+    background: #101f36;
+    transition:400ms ease all;
+  }
+
+  .home__button:after{
+    right:inherit;
+    top:inherit;
+    left:0;
+    bottom:0;
+  }
+
+  .home__button:hover:before,.home__button:hover:after{
+    width:100%;
+    transition:800ms ease all;
+  }
+  
+  @media screen and (max-width: 800px) {
+
+    .home__text h3{
+      width:90%;
+      font-size: 20px;
+      font-family: 'MuseoModerno', cursive;
+  }
+    .home__text h1{
+      padding: 100px 0px 50px 0px;
+  }
+
+  .home__text{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.home__video video{
+  width:auto;
+}
+#home__buttonContainer{
+  margin-top:70px;
+  flex-direction:column;
+  gap:30px
+}
+  }

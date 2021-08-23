@@ -1,0 +1,84 @@
+.navbar__container {
+    position: fixed;
+    display: flex;
+    top: 0px;
+    justify-content: space-between;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    
+    box-shadow: 0px 0px 10px 3px black;
+    z-index: 1;
+}
+
+.navbar_logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+}
+
+.navbar_logo img {
+    height: 50px;
+    padding: 10px;
+}
+
+.navbar_logo p {
+    margin: 0;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 30px;
+    color: white;
+}
+
+.navbar__headerRight {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    padding-right: 10px;
+}
+
+.navbar_avatar img {
+    transform: scale(1.2);
+}
+
+.navbar__logoutBtn {
+    color: white;
+    width: 100px;
+    height: 100%;
+    background-color:  black;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease-in;
+}
+
+.navbar__linkbtn {
+    color: white;
+    height: 50px;
+    width: 100px;
+    background-color:  black;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease-in;
+}
+
+.navbar__linkbtn:hover {
+    font-size: 18px;
+    color:black;
+    background-color: white;
+    box-shadow: 0px 0px 10px 3px black;
+}
+
+.navbar__logoutBtn:hover {
+    font-size: 18px;
+    color:black;
+    background-color: white;
+    box-shadow: 0px 0px 10px 3px black;
+}
+
+.navbar_avatar {
+    margin-left: 20px;
+    height: 32px !important;
+    width: 32px !important;
+}
