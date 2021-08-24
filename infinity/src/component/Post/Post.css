@@ -1,0 +1,88 @@
+.post {
+
+  font-family: 'MuseoModerno';
+  border: 1px solid lightgray;
+  width: fit-content;
+  background-color: #ffffff;
+  margin: 20px;
+  max-width: 700px;
+}
+
+.post__avatar {
+  margin-right: 10px;
+}
+
+.post__header {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.post__image {
+  width: 100%;
+  object-fit: contain;
+}
+
+.like__button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.comment__button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.post__text {
+  padding-left: 10px;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.post__hr {
+  width: 100%;
+  margin: 0;
+}
+
+
+.post__commentText {
+  padding: 5px 10px;
+  margin: 0 !important;
+}
+
+.post__caption {
+  font-weight: normal;
+}
+
+.post__commentBox {
+  display: flex;
+}
+
+.post__input {
+  flex: 1;
+  border: none;
+  padding: 10px 0px;
+  margin: 0px 15px;
+  outline: none;
+}
+
+.post__button {
+  border: none;
+  color: #6082a3;
+  padding-right: 10px;
+  background-color: transparent;
+  flex: 0;
+  cursor: pointer;
+}
+
+.button__section {
+  padding: 8px;
+}
+
+.button__section h4 {
+  padding-top: 10px;
+}

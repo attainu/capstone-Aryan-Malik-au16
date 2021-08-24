@@ -1,0 +1,56 @@
+.suggestion__text {
+    color: grey;
+    margin-bottom: 0 !important;
+    padding: 10px;
+}
+
+.suggested__users {
+    display: flex;
+    justify-content: space-between;
+    color: black;
+    width: 260px;
+    padding-top: 10px;
+}
+
+.suggestions__avatar {
+    height: 35px !important;
+    width: 35px !important;
+}
+
+.suggested__username {
+    display: flex;
+    flex-direction: row;
+    font-weight: 600;
+    padding-left: 10px;
+    font-size: 14px;
+    gap: 10px;
+}
+
+.suggested__followbtn {
+    position: absolute;
+    font-size: 12px;
+    right: -10px;
+    background-color: transparent;
+    border: none;
+    color: rgb(0, 149, 246);
+    font-weight: bolder;
+}
+
+.suggestion__container {
+    position: relative;
+    flex: 1;
+}
+.suggested__list {
+    height: 100%;
+    padding-left: 10px;
+    border-left: 1px solid lightgrey;
+    background-color: #fafafa;
+    right: 0px;
+    width: 300px;
+}
+
+.suggested_content {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+}
