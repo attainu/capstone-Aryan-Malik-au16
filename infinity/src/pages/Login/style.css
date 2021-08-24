@@ -1,0 +1,161 @@
+.login__container {
+    background-image: url("https://img.wallpapersafari.com/desktop/1920/1080/34/33/wIfSzO.jpg");
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login__form {
+    width: 400px;
+    padding: 40px;
+    background: rgba(0, 0, 0, .8);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, .5);
+    border-radius: 10px;
+}
+
+.login__logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.login__Image {
+    padding-bottom: 30px;
+    width: 100px;
+    height: auto;
+}
+
+.login_link{
+    padding-top: 20px;
+    font-size: 18px;
+    text-align: center;
+    color:white;
+}
+
+.alert{
+    position: fixed !important;
+    background-color:#f44336;
+    text-align: center;
+    top:0px;
+    width:100%;
+    padding: 10px;
+    background-color: #f44336;
+    color: white;
+    font-family: 'MuseoModerno', cursive;
+  }
+  
+/* INPUT */
+.inputBox {
+    position: relative;
+}
+
+.inputBox input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+    border: none;
+    border-radius: 0px;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    cursor: pointer;
+    outline: none;
+}
+
+.inputBox label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    letter-spacing: 1px;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+    outline: none;
+}
+
+.inputBox input:focus~label,
+.inputBox input:valid~label {
+    top: -18px;
+    left: 0;
+    color: #03a9f4;
+    font-size: 12px;
+}
+
+/* INPUT END */
+
+@media screen and (max-width: 800px) {
+
+    .login__container {
+        padding-top: 140px;
+    }
+
+    .login__form {
+        padding-top: 50px;
+        background: none;
+        border: none;
+        box-shadow: none;
+        width: 100%;
+        height: 100%;
+        margin: 0px;
+    }
+}
+
+/* BUTTONS */
+
+
+.login__button {
+    position: relative;
+    height: 50px;
+    width: 100%;
+    font-size: 20px;
+    font-family: 'Bungee', cursive;
+    background: #101f36;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    transition: 800ms ease all;
+}
+
+.login__button:hover {
+    background: #fff;
+    color: #101f36;
+}
+
+.login__button:before,
+.login__button:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 2px;
+    width: 0;
+    background: #101f36;
+    transition: 400ms ease all;
+}
+
+.login__button:after {
+    right: inherit;
+    top: inherit;
+    left: 0;
+    bottom: 0;
+}
+
+.login__button:hover:before,
+.login__button:hover:after {
+    width: 100%;
+    transition: 800ms ease all;
+}
+
+/* BUTTON END */

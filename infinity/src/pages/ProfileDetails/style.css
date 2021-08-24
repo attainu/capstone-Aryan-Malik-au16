@@ -1,0 +1,120 @@
+.profile__container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'MuseoModerno', cursive;
+}
+
+.profile__info {
+    height: 300px;
+    width: 100%;
+    background-image: url("https://images.unsplash.com/photo-1550147760-44c9966d6bc7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1575&q=80");
+    background-size: cover;
+    margin-bottom: 30px;
+    color: white;
+    margin-top: 50px;
+}
+
+.profile__Avatar {
+    height: 200px !important;
+    width: 200px !important;
+}
+
+.profile__posts {
+    display: grid;
+    grid-template-columns: auto auto;
+    background-color: #fafafa;
+    width: 80%;
+}
+
+.profile {
+    padding: 2rem 0;
+}
+
+
+.profile-image {
+    float: left;
+    width: calc(33.333% - 1rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 3rem;
+}
+
+.profile-image img {
+    border-radius: 50%;
+}
+
+.profile-user-settings,
+.profile-stats,
+.profile-bio {
+    float: left;
+    width: calc(66.666% - 2rem);
+}
+
+.profile-user-settings {
+    margin-top: 1.1rem;
+}
+
+.profile-user-name {
+    display: inline-block;
+    font-size: 3.2rem;
+    font-weight: 300;
+}
+
+.profile-stats {
+    margin-top: 2.3rem;
+}
+
+.profile-stats li {
+    display: inline-block;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    margin-right: 4rem;
+    cursor: pointer;
+}
+
+
+.profile-real-name,
+.profile-stat-count,
+.profile-edit-btn {
+    font-weight: 600;
+}
+
+@media screen and (max-width: 800px) {
+
+    .profile__posts {
+        display: grid;
+        grid-template-columns: auto;
+        width: auto;
+    }
+
+    .profile__linkbtn {
+        background-color: transparent;
+        border: none;
+        font-size: 22px;
+        border-radius: 17px;
+        width: 105px;
+    }
+
+    .profile__linkbtn::before {
+        font-family: "Material Icons";
+        content: "\e88a";
+        font-size: 30px;
+    }
+
+    .profile__info {
+        height: auto;
+    }
+
+    .profile-stats li {
+        font-size: 1.15rem;
+    }
+
+    .profile__Avatar {
+        height: 150px !important;
+        width: 150px !important;
+        margin-left: 30px
+    }
+}
