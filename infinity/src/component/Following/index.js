@@ -16,7 +16,7 @@ const Following = ({ following }) => {
         }
         followedProfiles();
     }, [currentUser.uid, following, getfollowedProfiles]);
-    
+
     return !profiles ? (
         <div>
             <Modal
@@ -50,10 +50,10 @@ const Following = ({ following }) => {
                     </div>
                 </div>
             </Modal>
-            <button className="following__button" onClick={() => setOpen(true)}><p>Following</p></button>
+            <button className="following__button" onClick={() => setOpen(true)}><p style={{ "marginBottom": "0" }} >Following</p></button>
         </div>
 
-    ) : ( <div>
+    ) : (<div>
         <Modal
             open={open}
             onClose={() => setOpen(false)}>
@@ -61,7 +61,7 @@ const Following = ({ following }) => {
                 <h1>No followings</h1>
             </div>
         </Modal>
-        <button className="following__button" onClick={() => setOpen(true)}><p>Following</p></button>
+        <button className="following__button" onClick={() => setOpen(true)}><p style={{ "marginBottom": "0" }} >Following</p></button>
     </div>);
 };
 

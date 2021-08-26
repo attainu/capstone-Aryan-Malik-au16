@@ -22,7 +22,7 @@ const ImageUpload = ({ username }) => {
 
 
     const handleUpload = () => {
-        const uploadTask = storage.ref(`images/${image.name}`).put(image);
+        const uploadTask = storage.ref(`posts/${image.name}`).put(image);
         uploadTask.on(
             "state_changed",
             (snapshot) => {
@@ -36,12 +36,12 @@ const ImageUpload = ({ username }) => {
             },
             () => {
                 storage
-                    .ref("images")
+                    .ref("posts")
                     .child(image.name)
                     .getDownloadURL()
                     .then(url => {
                         db.collection("posts").add({
-                            imageUrl: url,
+                            postUrl: url,
                             caption: caption,
                             username: username,
                             timestamp: firebase.firestore.FieldValue.serverTimestamp(),
@@ -82,7 +82,7 @@ const ImageUpload = ({ username }) => {
                 </div>
             </Modal>
 
-            <button className="upload__button" onClick={() => setOpen(true)}><p>upload</p></button>
+            <button className="upload__button responsive__btn" onClick={() => setOpen(true)}><p style={{ "marginBottom": "0" }} >upload</p></button>
         </div>
 
     );

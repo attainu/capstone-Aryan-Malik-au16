@@ -1,3 +1,11 @@
+.dropdown-toggle::after {
+    display: none !important;
+}
+
+.dropdown-toggle:focus {
+    box-shadow: none !important;
+}
+
 .dashboard_avatar {
     height: 30px !important;
     width: 30px !important;
@@ -7,14 +15,6 @@
     margin-top: 20px !important;
     height: 120px !important;
     width: 120px !important;
-}
-
-.dropdown-toggle::after {
-    display: none !important;
-}
-
-.dropdown-toggle:focus {
-    box-shadow: none !important;
 }
 
 .dropdown-toggle {
@@ -32,7 +32,6 @@
 
 .dashboard__main {
     display: flex;
-
 }
 
 .dashboard__sidebar {
@@ -43,7 +42,7 @@
     align-items: center;
     left: 0px;
     background-color: rgb(0, 0, 0, 0.9);
-    width: 300px;
+    width: 310px;
     height: 100%;
     font-family: 'MuseoModerno';
 }
@@ -80,6 +79,9 @@
     font-size: 17px;
 }
 
+.responsive__container {
+    display: none;
+}
 
 .dashboard__posts {
     padding-top: 10px;
@@ -87,25 +89,10 @@
     flex-direction: column;
     align-items: center;
     flex: 3;
+    background-color: #f1dfd1;
+    background-image: linear-gradient(315deg, #f1dfd1 0%, #f6f0ea 74%);
 }
 
-.responsive__suggestlist {
-    height: 100%;
-    padding-left: 10px;
-    border-left: 1px solid lightgrey;
-    background-color: #fafafa;
-    right: 0px;
-    width: 300px;
-}
-
-.responsive__container {
-    display: none;
-}
-
-.responsivebtn {
-    display: flex;
-    flex-direction: row;
-}
 
 @media screen and (max-width: 800px) {
     .dashboard__sidebar {
@@ -116,26 +103,6 @@
         display: none;
     }
 
-    .responsive__container {
-        position: fixed;
-        bottom: 10px;
-        border: 3px solid black;
-        justify-content: center;
-        display: flex;
-        left: 50%;
-        transform: translate(-50%, 0);
-        background-color: white;
-        width: fit-content;
-        border-radius: 25px;
-    }
-
-    .responsive__suggestlist {
-        position: fixed;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-    }
-
     .suggested_content {
         width: 90%;
     }
@@ -144,60 +111,105 @@
         display: none;
     }
 
+    .following__button p {
+        display: none;
+    }
+
+    .upload__button p {
+        display: none;
+    }
+
+    .imageupload {
+        width: 100%;
+        display: flex;
+    }
+
+    .post {
+        border-radius: 20px;
+    }
+
+    .dashboard__posts {
+        margin-bottom: 50px;
+        background-color: #f1dfd1;
+        background-image: linear-gradient(315deg, #f1dfd1 0%, #f6f0ea 74%);
+    }
+
+    .responsive__container {
+        position: fixed;
+        bottom: -2px;
+        justify-content: center;
+        display: flex;
+        left: 50%;
+        transform: translate(-50%, 0);
+        background-color: black;
+        width: 100%;
+    }
+
+    .responsive__suggestlist {
+        position: fixed;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        height: 100%;
+        padding-left: 10px;
+        border-left: 1px solid lightgrey;
+        background-color: #fafafa;
+        right: 0px;
+    }
+
     .responsive__btn {
-        width: 70px;
         border: none;
         background-color: transparent;
         outline: none;
-        border-right: 1px solid lightgray;
+        padding: 0px 30px;
+        width: 100%;
     }
 
     .responsive__postbtn::before {
         font-family: "Material Icons";
         content: "\e88a";
         font-size: 30px;
-    }
-
-    .responsive__profilebtn::before {
-        font-family: "Material Icons";
-        content: "\e8a6";
-        font-size: 30px;
-        height: 100px;
+        color: white;
     }
 
     .following__button::before {
         font-family: "Material Icons";
         content: "\ea21";
         font-size: 30px;
-        color: black;
+        color: white;
     }
 
     .upload__button::before {
         font-family: "Material Icons";
         content: "\e2c6";
         font-size: 30px;
-        color: black;
+        color: white;
     }
 
     .responsive__suggestbtn::before {
         font-family: "Material Icons";
-        content: "\ea4d";
+        content: "\e7fe";
         font-size: 30px;
+        color: white;
     }
 
-    .following__button p {
-        display: none;
+    .responsive__postbtn:focus::before {
+        font-weight: bolder;
+        color: #808080;
     }
 
-    .following__button:hover {
-        background: transparent !important;
+    .following__button:focus::before {
+        font-weight: bolder;
+        color: #808080;
     }
 
-    .upload__button:hover {
-        background: transparent;
+    .responsive__suggestbtn:focus::before {
+        font-weight: bolder;
+        color: #808080;
     }
 
-    .upload__button p {
-        display: none;
+    .upload__button:focus::before {
+        font-weight: bolder;
+        color: #808080;
     }
 }

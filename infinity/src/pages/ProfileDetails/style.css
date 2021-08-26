@@ -90,6 +90,10 @@
         width: auto;
     }
 
+    .profile__container {
+        margin-bottom: 50px;
+    }
+
     .profile__linkbtn {
         background-color: transparent;
         border: none;
@@ -100,8 +104,9 @@
 
     .profile__linkbtn::before {
         font-family: "Material Icons";
-        content: "\e88a";
-        font-size: 30px;
+        content: "\e31b";
+        font-size: 40px;
+        color: white;
     }
 
     .profile__info {

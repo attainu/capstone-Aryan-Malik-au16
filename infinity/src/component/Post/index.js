@@ -3,8 +3,10 @@ import "./Post.css";
 import Avatar from "@material-ui/core/Avatar";
 import { db } from "../../config/firebase";
 import { useAuth } from "../../context/AuthContext";
+import isImageUrl from "is-image-url";
+
 const Post = forwardRef(
-    ({ username, postId, imageUrl, caption, avatarURL }, ref) => {
+    ({ username, postId, postUrl, caption, avatarURL }, ref) => {
         const [comments, setComments] = useState([]);
         const [comment, setComment] = useState("");
         const [likes, setLikes] = useState([]);
@@ -12,6 +14,7 @@ const Post = forwardRef(
         const likenum = likes.length;
         const [showComment, setShowComment] = useState(false);
         const { currentUser } = useAuth()
+
         useEffect(() => {
             let unsubscribe;
             if (postId) {
@@ -47,6 +50,7 @@ const Post = forwardRef(
             }
             )
         }, [likes, currentUser.displayName]);
+
 
         const likeData = (e) => {
             e.preventDefault();
@@ -87,7 +91,15 @@ const Post = forwardRef(
                     />
                     <div>{username}</div>
                 </div>
-                <img className="post__image" src={imageUrl} alt="post" />
+
+                {isImageUrl(postUrl) ? (
+                    <img className="post__image" src={postUrl} alt="not able to load post" />
+                ) : (
+                    <video width="100%" controls>
+                        <source src={postUrl} type="video/mp4"></source>
+                    </video>
+                )
+                }
 
                 <div className="button__section">
                     {like ? (
@@ -160,7 +172,7 @@ const Post = forwardRef(
                     </button>
                 </form>
 
-            </div>
+            </div >
         );
     }
 );

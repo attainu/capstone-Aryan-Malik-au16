@@ -78,17 +78,19 @@ function ProfileDetails(props) {
                                 avatarURL={post.avatarUrl}
                                 username={post.username}
                                 caption={post.caption}
-                                imageUrl={post.imageUrl}
+                                postUrl={post.postUrl}
                             />
                         </div>
                     }
                     return true
                 })}
             </div>
-            
+
             <div className="responsive__container">
                 <div className="responsivebtn">
-                    <Link style={{ "textDecoration": "none", "color": "white" }} to={`/dashboard`} >
+                    <Link style={{
+                        "textDecoration": "none", "color": "white", "width": "100%", "text-align": "center"
+                    }} to={`/dashboard`} >
                         <button className="profile__linkbtn">
                         </button>
                     </Link>

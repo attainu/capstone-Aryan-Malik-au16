@@ -10,9 +10,6 @@ import './style.css'
 import Following from '../../component/Following';
 
 function Dashboard() {
-
-    console.log(process.env)
-
     const [users, setusers] = useState();
     const { currentUser } = useAuth()
     const [posts, setPosts] = useState([]);
@@ -74,7 +71,7 @@ function Dashboard() {
                                 avatarURL={post.avatarUrl}
                                 username={post.username}
                                 caption={post.caption}
-                                imageUrl={post.imageUrl}
+                                postUrl={post.postUrl}
                             />
                         ))}
                     </div>
@@ -111,32 +108,28 @@ function Dashboard() {
             </div>
 
             <div className="responsive__container">
-                <div className="responsivebtn">
-                    <button className="responsive__btn responsive__postbtn" onClick={() => (setDisplay(false))}>
-                    </button>
-                    <button className="responsive__btn responsive__followbtn">
-                        {users && (
-                            <div className="following">
-                                {users.map(({ id, data }) => {
-                                    if (currentUser.uid === id) {
-                                        return <Following
-                                            key={id}
-                                            following={data.following}
-                                        />
-                                    }
-                                    return false
-                                })}
-                            </div>
-                        )}
-                    </button>
+                <button className="responsive__btn responsive__postbtn" onClick={() => (setDisplay(false))}>
+                </button>
+                {users && (
+                    <div className="responsive__btn responsive__followbtn">
+                        {users.map(({ id, data }) => {
+                            if (currentUser.uid === id) {
+                                return <Following
+                                    key={id}
+                                    following={data.following}
+                                />
+                            }
+                            return false
+                        })}
+                    </div>
+                )}
 
-                    <button className="responsive__btn responsive__suggestbtn" onClick={() => (setDisplay(true))}>
-                    </button>
-                    <button style={{ "border": "none" }} className="responsive__btn responsive__uploadbtn"> <ImageUpload username={currentUser.displayName} /></button>
-                </div>
+                <button className="responsive__btn responsive__suggestbtn" onClick={() => (setDisplay(true))}>
+                </button>
+                <ImageUpload style={{ "border": "none" }} username={currentUser.displayName} />
             </div>
-
         </div>
+
     )
 }
 
